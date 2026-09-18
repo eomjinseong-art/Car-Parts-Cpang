@@ -124,7 +124,7 @@
       return response.json();
     }).then(products => {
       state.products = applySessionOrder(uniqueProducts(products).filter(item =>
-        item.product?.imageUrl?.endsWith('.jpg') && !/^자동차 용품 추천 /.test(item.product.title || '')
+        item.product?.imageUrl?.endsWith('.jpg') && !/^자동차 용품 추천/.test(item.product.title || '')
       ));
       renderCategories();
       renderProducts();

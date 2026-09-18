@@ -472,7 +472,7 @@ function isWeakTitle(value) {
 }
 
 function isJunkTitle(value) {
-  return /지식iN|모래요 여러분|궁금한 것은|유사한 상품을 노출|소재: 합성섬유|사용대상 구분|서프코코스|웻슈트|래시가드|캣타워|츄르|로얄캐닌|숨숨집/.test(value || '');
+  return /지식iN|모래요 여러분|궁금한 것은|유사한 상품을 노출|소재: 합성섬유|사용대상 구분|서프코코스|웻슈트|래시가드|캣타워|츄르|로얄캐닌|숨숨집|현재가|평균구매가|가격 추이|역대최고가|역대최저가|최저가 비교|관측 최저|지금은 관측|가격 흐름/.test(value || '');
 }
 
 function displayTitle(raw, id, category) {
