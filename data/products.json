@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "category": "세차·클리닝",
+    "categoryKey": "wash",
+    "description": "거품이 적당하고 잔여물이 적다는 이야기가 반복됩니다. 셀프 세차에서 헹굼이 편한 중성 샴푸를 우선했습니다.",
+    "product": {
+      "title": "불스원 크리스탈 카샴푸",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EB%B6%88%EC%8A%A4%EC%9B%90%20%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%83%88%20%EC%B9%B4%EC%83%B4%ED%91%B8",
+      "imageUrl": "./images/products/product-001.jpg",
+      "productId": "car-shampoo",
+      "price": 12900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 2,
+    "category": "세차·클리닝",
+    "categoryKey": "wash",
+    "description": "소형 여러 장 구성이 많아서 휠·바디·유리를 나눠 쓰기 좋습니다.",
+    "product": {
+      "title": "차싹 초극세사 세차타월",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%B0%A8%EC%8B%B9%20%EC%B4%88%EA%B7%B9%EC%84%B8%EC%82%AC%20%EC%84%B8%EC%B0%A8%ED%83%80%EC%9B%94",
+      "imageUrl": "./images/products/product-002.jpg",
+      "productId": "wash-towel",
+      "price": 9900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 3,
+    "category": "세차·클리닝",
+    "categoryKey": "wash",
+    "description": "작업용 세차타월과 칸을 나눴습니다. 이 칸은 물기 제거용 대형만 봅니다.",
+    "product": {
+      "title": "코멧 극세사 양면 드라잉타월",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%BD%94%EB%A9%A7%20%EA%B7%B9%EC%84%B8%EC%82%AC%20%EB%93%9C%EB%9D%BC%EC%9E%89%ED%83%80%EC%9B%94",
+      "imageUrl": "./images/products/product-003.jpg",
+      "productId": "drying-towel",
+      "price": 12900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 4,
+    "category": "세차·클리닝",
+    "categoryKey": "wash",
+    "description": "뿌리고 닦는 방식이 단순해서 실내외 유리에 쓰기 쉽습니다.",
+    "product": {
+      "title": "카렉스 스마트 유리세정제",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%B9%B4%EB%A0%89%EC%8A%A4%20%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%9C%A0%EB%A6%AC%EC%84%B8%EC%A0%95%EC%A0%9C",
+      "imageUrl": "./images/products/product-004.jpg",
+      "productId": "glass-cleaner",
+      "price": 7900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 5,
+    "category": "세차·클리닝",
+    "categoryKey": "wash",
+    "description": "유리세정제와 역할을 나눴습니다. 이 칸은 묵은 유막만 봅니다.",
+    "product": {
+      "title": "불스원 레인OK 유막제거제",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EB%B6%88%EC%8A%A4%EC%9B%90%20%EC%9C%A0%EB%A7%89%EC%A0%9C%EA%B1%B0%EC%A0%9C",
+      "imageUrl": "./images/products/product-005.jpg",
+      "productId": "film-remover",
+      "price": 8900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 6,
+    "category": "세차·클리닝",
+    "categoryKey": "wash",
+    "description": "브레이크 분진이 붙는 휠만 따로 보는 칸입니다.",
+    "product": {
+      "title": "불스원 휠세정제",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EB%B6%88%EC%8A%A4%EC%9B%90%20%ED%9C%A0%EC%84%B8%EC%A0%95%EC%A0%9C",
+      "imageUrl": "./images/products/product-006.jpg",
+      "productId": "wheel-cleaner",
+      "price": 9900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 7,
+    "category": "세차·클리닝",
+    "categoryKey": "wash",
+    "description": "대시보드·도어트림 플라스틱을 한 제품으로 닦는 칸입니다.",
+    "product": {
+      "title": "불스원 실내세정제",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EB%B6%88%EC%8A%A4%EC%9B%90%20%EC%8B%A4%EB%82%B4%EC%84%B8%EC%A0%95%EC%A0%9C",
+      "imageUrl": "./images/products/product-007.jpg",
+      "productId": "interior-cleaner",
+      "price": 8900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 8,
+    "category": "정비·소모품",
+    "categoryKey": "maintain",
+    "description": "하이브리드 타입이 국산 차종 호환 표가 잘 되어 있습니다.",
+    "product": {
+      "title": "필터포유 하이브리드 와이퍼",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%ED%95%84%ED%84%B0%ED%8F%AC%EC%9C%A0%20%ED%95%98%EC%9D%B4%EB%B8%8C%EB%A6%AC%EB%93%9C%20%EC%99%80%EC%9D%B4%ED%8D%BC",
+      "imageUrl": "./images/products/product-008.jpg",
+      "productId": "wiper",
+      "price": 18900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 9,
+    "category": "정비·소모품",
+    "categoryKey": "maintain",
+    "description": "사계절용이 흔하고 에탄올 함량 표기가 비교적 분명합니다.",
+    "product": {
+      "title": "불스원 레인OK 워셔액",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EB%B6%88%EC%8A%A4%EC%9B%90%20%EB%A0%88%EC%9D%B8OK%20%EC%9B%8C%EC%85%94%EC%95%A1",
+      "imageUrl": "./images/products/product-009.jpg",
+      "productId": "washer-fluid",
+      "price": 6900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 10,
+    "category": "정비·소모품",
+    "categoryKey": "maintain",
+    "description": "차종 호환 검색이 잘 되고 활성탄 타입이 기본으로 많습니다.",
+    "product": {
+      "title": "필터포유 자동차 에어컨 히터 필터",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%ED%95%84%ED%84%B0%ED%8F%AC%EC%9C%A0%20%EC%9E%90%EB%8F%99%EC%B0%A8%20%EC%97%90%EC%96%B4%EC%BB%A8%20%ED%95%84%ED%84%B0",
+      "imageUrl": "./images/products/product-010.jpg",
+      "productId": "cabin-filter",
+      "price": 12900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 11,
+    "category": "정비·소모품",
+    "categoryKey": "maintain",
+    "description": "연료첨가제 칸에서 가장 먼저 비교되는 제품이라 후기 패턴을 보기 쉽습니다.",
+    "product": {
+      "title": "불스원샷",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EB%B6%88%EC%8A%A4%EC%9B%90%EC%83%B7",
+      "imageUrl": "./images/products/product-011.jpg",
+      "productId": "fuel-additive",
+      "price": 14900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 12,
+    "category": "실내·편의",
+    "categoryKey": "cabin",
+    "description": "송풍구형이 아니라 디퓨저형이라 향 지속 이야기가 더 많습니다.",
+    "product": {
+      "title": "쿤달 퍼퓸 차량용 디퓨저",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%BF%A4%EB%8B%AC%20%ED%8D%BC%ED%93%B8%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EB%94%94%ED%93%A8%EC%A0%80",
+      "imageUrl": "./images/products/product-012.jpg",
+      "productId": "air-freshener",
+      "price": 12900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 13,
+    "category": "실내·편의",
+    "categoryKey": "cabin",
+    "description": "헤드레스트 스트랩형이 차종 제약이 적습니다.",
+    "product": {
+      "title": "메이튼 차량용 목쿠션",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EB%A9%94%EC%9D%B4%ED%8A%BC%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EB%AA%A9%EC%BF%A0%EC%85%98",
+      "imageUrl": "./images/products/product-013.jpg",
+      "productId": "neck-cushion",
+      "price": 12900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 14,
+    "category": "실내·편의",
+    "categoryKey": "cabin",
+    "description": "차종 전용 패턴은 빼고 접어서 바이저에 끼우는 범용만 봤습니다.",
+    "product": {
+      "title": "접이식 전면 햇빛가리개",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EC%A0%84%EB%A9%B4%20%ED%96%87%EB%B9%9B%EA%B0%80%EB%A6%AC%EA%B0%9C",
+      "imageUrl": "./images/products/product-014.jpg",
+      "productId": "sunshade",
+      "price": 12900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 15,
+    "category": "실내·편의",
+    "categoryKey": "cabin",
+    "description": "스펀지 스트립 여러 장이라 문 가장자리에 나눠 붙이기 쉽습니다.",
+    "product": {
+      "title": "코멧 차량용 도어가드 문콕방지",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%BD%94%EB%A9%A7%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EB%8F%84%EC%96%B4%EA%B0%80%EB%93%9C",
+      "imageUrl": "./images/products/product-015.jpg",
+      "productId": "door-guard",
+      "price": 1730,
+      "rocket": true
+    }
+  },
+  {
+    "id": 16,
+    "category": "실내·편의",
+    "categoryKey": "cabin",
+    "description": "콘솔과 시트 사이 핸드폰 낙하를 막는 칸입니다.",
+    "product": {
+      "title": "시트 틈새 쿠션 사이드 포켓",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%B0%A8%EB%9F%89%20%ED%8B%88%EC%83%88%20%EC%BF%A0%EC%85%98%20%EC%82%AC%EC%9D%B4%EB%93%9C%20%ED%8F%AC%EC%BC%93",
+      "imageUrl": "./images/products/product-016.jpg",
+      "productId": "gap-cushion",
+      "price": 8900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 17,
+    "category": "실내·편의",
+    "categoryKey": "cabin",
+    "description": "접이식 박스라 쓰지 않을 때 납작해집니다.",
+    "product": {
+      "title": "메이튼 접이식 트렁크 정리함",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EB%A9%94%EC%9D%B4%ED%8A%BC%20%ED%8A%B8%EB%A0%81%ED%81%AC%20%EC%A0%95%EB%A6%AC%ED%95%A8",
+      "imageUrl": "./images/products/product-017.jpg",
+      "productId": "trunk-organizer",
+      "price": 18900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 18,
+    "category": "실내·편의",
+    "categoryKey": "cabin",
+    "description": "번호 전체를 노출하지 않는 QR형이 최근 기본값입니다.",
+    "product": {
+      "title": "QR 주차 안심번호판",
+      "coupangUrl": "https://www.coupang.com/np/search?q=QR%20%EC%A3%BC%EC%B0%A8%EB%B2%88%ED%98%B8%ED%8C%90",
+      "imageUrl": "./images/products/product-018.jpg",
+      "productId": "parking-plate",
+      "price": 8900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 19,
+    "category": "전자·충전",
+    "categoryKey": "electro",
+    "description": "맥세이프 사용 비중이 높아 집게형보다 한 손 거치가 쉽습니다.",
+    "product": {
+      "title": "신지모루 맥세이프 차량용 거치대",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%A7%80%EB%AA%A8%EB%A3%A8%20%EB%A7%A5%EC%84%B8%EC%9D%B4%ED%94%84%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EA%B1%B0%EC%B9%98%EB%8C%80",
+      "imageUrl": "./images/products/product-019.jpg",
+      "productId": "phone-mount",
+      "price": 28900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 20,
+    "category": "전자·충전",
+    "categoryKey": "electro",
+    "description": "USB-C PD가 있는 듀얼 포트를 우선했습니다.",
+    "product": {
+      "title": "차량용 고속충전 시거잭",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EA%B3%A0%EC%86%8D%EC%B6%A9%EC%A0%84%20%EC%8B%9C%EA%B1%B0%EC%9E%AD",
+      "imageUrl": "./images/products/product-020.jpg",
+      "productId": "car-charger",
+      "price": 14900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 21,
+    "category": "전자·충전",
+    "categoryKey": "electro",
+    "description": "단말기 없이 카드만 쓰는 차라면 가장 단순한 선택입니다.",
+    "product": {
+      "title": "하이플러스 자동충전 하이패스카드",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%ED%95%98%EC%9D%B4%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%9E%90%EB%8F%99%EC%B6%A9%EC%A0%84%20%ED%95%98%EC%9D%B4%ED%8C%A8%EC%8A%A4%EC%B9%B4%EB%93%9C",
+      "imageUrl": "./images/products/product-021.jpg",
+      "productId": "hipass",
+      "price": 6000,
+      "rocket": true
+    }
+  },
+  {
+    "id": 22,
+    "category": "전자·충전",
+    "categoryKey": "electro",
+    "description": "가정용 대형기가 아니라 시트 틈·발판용입니다.",
+    "product": {
+      "title": "차량용 핸디 청소기",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%ED%95%B8%EB%94%94%20%EC%B2%AD%EC%86%8C%EA%B8%B0",
+      "imageUrl": "./images/products/product-022.jpg",
+      "productId": "car-vacuum",
+      "price": 24900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 23,
+    "category": "안전",
+    "categoryKey": "safety",
+    "description": "고속도로 정차 시 비치가 필요한 칸입니다.",
+    "product": {
+      "title": "접이식 차량용 삼각대",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EC%82%BC%EA%B0%81%EB%8C%80",
+      "imageUrl": "./images/products/product-023.jpg",
+      "productId": "warning-triangle",
+      "price": 12900,
+      "rocket": true
+    }
+  },
+  {
+    "id": 24,
+    "category": "안전",
+    "categoryKey": "safety",
+    "description": "유리 파쇄와 벨트 커터가 한 몸인 제품을 골랐습니다.",
+    "product": {
+      "title": "비상탈출 해머 벨트커터",
+      "coupangUrl": "https://www.coupang.com/np/search?q=%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EB%B9%84%EC%83%81%ED%83%88%EC%B6%9C%20%ED%95%B4%EB%A8%B8",
+      "imageUrl": "./images/products/product-024.jpg",
+      "productId": "safety-hammer",
+      "price": 8900,
+      "rocket": true
+    }
+  }
+]

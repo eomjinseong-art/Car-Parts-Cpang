@@ -1,0 +1,15 @@
+name: Sync Coupang products
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Local collection only
+        run: echo "상품명과 사진은 GitHub Actions가 아니라 로컬 PC에서 수집합니다."

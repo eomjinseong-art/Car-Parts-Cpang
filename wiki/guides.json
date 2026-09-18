@@ -1,0 +1,46 @@
+{
+  "disclaimer": "이 글은 일반적인 자동차 용품 고르기 안내입니다. 차종·연식·보증에 따라 호환이 다를 수 있습니다. 정비와 안전은 매뉴얼과 전문가 안내를 우선하세요.",
+  "blogTopics": [],
+  "guides": [
+    {
+      "slug": "01-wash",
+      "title": "셀프 세차 기본 세트",
+      "description": "샴푸, 타월, 유리, 휠, 실내를 역할별로 나눠 고르는 짧은 안내.",
+      "wikiCategory": "세차·클리닝",
+      "readMinutes": 4,
+      "productCategories": ["세차·클리닝"]
+    },
+    {
+      "slug": "02-maintain",
+      "title": "주기적으로 가는 소모품",
+      "description": "와이퍼, 워셔액, 캐빈 필터, 연료첨가제를 언제 보는지.",
+      "wikiCategory": "정비·소모품",
+      "readMinutes": 4,
+      "productCategories": ["정비·소모품"]
+    },
+    {
+      "slug": "03-cabin",
+      "title": "실내를 편하게",
+      "description": "향, 목쿠션, 햇빛가리개, 수납처럼 타고 내릴 때 쓰는 용품.",
+      "wikiCategory": "실내·편의",
+      "readMinutes": 3,
+      "productCategories": ["실내·편의"]
+    },
+    {
+      "slug": "04-electro",
+      "title": "거치·충전·하이패스",
+      "description": "한 손 거치, USB-C 충전, 카드형 하이패스, 시트 틈 청소기.",
+      "wikiCategory": "전자·충전",
+      "readMinutes": 3,
+      "productCategories": ["전자·충전"]
+    },
+    {
+      "slug": "05-safety",
+      "title": "트렁크에 둘 안전 용품",
+      "description": "고속도로 정차용 삼각대와 유리 파쇄·벨트 커터 해머.",
+      "wikiCategory": "안전",
+      "readMinutes": 3,
+      "productCategories": ["안전"]
+    }
+  ]
+}

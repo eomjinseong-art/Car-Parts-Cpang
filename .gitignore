@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+tools/naver-*.html
+*.log
+data/scrape-failed.json
+data/fix-rows.csv
+data/sheet-update.csv
+images/products/*.svg

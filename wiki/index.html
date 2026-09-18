@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="자동차 용품을 상황별로 고르는 차랑몰 가이드">
+  <title>용품가이드 | 차랑몰</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: Inter, "Noto Sans KR", -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-black">
+  <header class="sticky top-0 z-20 border-b border-neutral-200 bg-white">
+    <div class="mx-auto max-w-5xl px-4 py-3">
+      <div class="flex items-center justify-between gap-3">
+        <a href="../" class="text-[22px] font-semibold tracking-[0.18em] text-black">차랑몰 <span class="hidden text-[11px] font-medium tracking-[0.28em] text-neutral-400 sm:inline">CAR GOODS</span></a>
+        <a id="headerLink" href="#" target="_blank" rel="noopener" class="shrink-0 bg-black px-3 py-2 text-[11px] font-medium tracking-wide text-white">오늘의 특가</a>
+      </div>
+      <nav class="mt-3 flex gap-5 text-[13px] font-medium tracking-wide">
+        <a href="../" class="pb-1 text-neutral-400 hover:text-black">자동차용품</a>
+        <a href="./" class="border-b border-black pb-1 text-black">용품가이드</a>
+        <span id="visitCount" hidden aria-hidden="true" class="ml-auto shrink-0 self-center text-[11px] font-medium tracking-wide text-neutral-400 tabular-nums"></span>
+      </nav>
+    </div>
+  </header>
+  <main class="mx-auto max-w-5xl px-4 pb-40">
+    <section class="py-8">
+      <p class="mb-2 text-[11px] font-medium tracking-wide text-neutral-400">용품가이드</p>
+      <h1 class="text-3xl font-semibold leading-tight sm:text-4xl">사는 법만 짧게</h1>
+      <p class="mt-3 max-w-xl text-[13px] leading-6 text-neutral-500">세차, 소모품, 실내, 충전, 안전. 홈에서 상품을 고르고, 여기서는 칸을 나누는 기준만 봅니다.</p>
+    </section>
+    <nav class="sticky top-[5.4rem] z-10 -mx-4 mb-6 border-b border-neutral-200 bg-white px-4">
+      <div id="wikiCats" class="flex gap-4 overflow-x-auto"></div>
+    </nav>
+    <section id="guideGrid" class="grid gap-x-6 gap-y-8 sm:grid-cols-2"></section>
+  </main>
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white">
+    <div class="flex">
+      <a id="footerWow" href="https://www.coupang.com/np/campaigns/82" target="_blank" rel="noopener sponsored" class="flex-1 py-2 text-center text-[11px] font-medium tracking-wide text-black">로켓와우</a>
+      <a id="footerStay" href="https://www.coupang.com/np/search?q=%EC%84%B8%EC%B0%A8%20%EC%9A%A9%ED%92%88" target="_blank" rel="noopener sponsored" class="flex-1 border-l border-neutral-200 py-2 text-center text-[11px] font-medium tracking-wide text-black">세차용품</a>
+    </div>
+    <a href="../" class="block bg-black py-3 text-center text-[13px] font-medium tracking-wide text-white" style="padding-bottom: max(0.75rem, env(safe-area-inset-bottom))">상품 전체 보기</a>
+  </div>
+  <script>
+    const state = {
+      guides: [],
+      category: new URLSearchParams(location.search).get('cat') || '전체'
+    };
+    const $ = id => document.getElementById(id);
+    fetch('../data/config.json').then(r => r.json()).then(config => {
+      $('headerLink').href = config.featuredLink;
+      $('headerLink').textContent = config.featuredLabel;
+      if (config.rocketWowLink) $('footerWow').href = config.rocketWowLink;
+      if (config.carSearchLink) $('footerStay').href = config.carSearchLink;
+    });
+    fetch('./guides.json').then(r => r.json()).then(data => {
+      state.guides = data.guides || [];
+      renderCats();
+      renderGuides();
+    }).catch(() => {
+      $('guideGrid').innerHTML = '<p class="py-16 text-center text-[12px] text-neutral-400">가이드 목록을 불러오지 못했습니다.</p>';
+    });
+    function cats() {
+      return ['전체', ...[...new Set(state.guides.map(g => g.wikiCategory))]];
+    }
+    function chipClass(name) {
+      return `shrink-0 px-1 py-2 text-[12px] font-medium tracking-wide ${name === state.category ? 'border-b-2 border-black text-black' : 'text-neutral-400 hover:text-black'}`;
+    }
+    function renderCats() {
+      $('wikiCats').innerHTML = cats().map(name =>
+        `<button type="button" data-cat="${escapeHtml(name)}" class="${chipClass(name)}">${escapeHtml(name)}</button>`
+      ).join('');
+      $('wikiCats').querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => {
+          state.category = button.dataset.cat;
+          const url = new URL(location.href);
+          if (state.category === '전체') url.searchParams.delete('cat');
+          else url.searchParams.set('cat', state.category);
+          history.replaceState({}, '', url);
+          renderCats();
+          renderGuides();
+        });
+      });
+    }
+    function renderGuides() {
+      const list = state.category === '전체'
+        ? state.guides
+        : state.guides.filter(g => g.wikiCategory === state.category);
+      $('guideGrid').innerHTML = list.map(guide =>
+        `<a href="./${encodeURIComponent(guide.slug)}.html" class="border-b border-neutral-200 pb-6"><span class="text-[10px] font-medium tracking-wide text-neutral-400">${escapeHtml(guide.wikiCategory)}</span><h2 class="mt-2 text-lg font-semibold">${escapeHtml(guide.title)}</h2><p class="mt-2 text-[13px] leading-6 text-neutral-500">${escapeHtml(guide.description)}</p><p class="mt-3 text-[11px] text-neutral-400">읽는 시간 약 ${guide.readMinutes}분</p></a>`
+      ).join('');
+    }
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
+    }
+  </script>
+  <script src="../visits.js"></script>
+</body>
+</html>

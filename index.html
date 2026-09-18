@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>차랑몰 | 자동차 용품 큐레이션</title>
+  <meta name="description" content="차랑몰이 고른 자동차 용품 큐레이션. 세차·클리닝, 정비 소모품, 실내 편의, 전자·충전, 안전 용품을 한곳에서 비교하고 쿠팡에서 확인하세요.">
+  <link rel="canonical" href="https://car-parts-cpang.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="차랑몰">
+  <meta property="og:title" content="차랑몰 | 자동차 용품 큐레이션">
+  <meta property="og:description" content="차랑몰이 고른 자동차 용품 큐레이션. 세차·클리닝, 정비 소모품, 실내 편의, 전자·충전, 안전 용품을 한곳에서 비교하고 쿠팡에서 확인하세요.">
+  <meta property="og:url" content="https://car-parts-cpang.vercel.app/">
+  <meta property="og:image" content="https://car-parts-cpang.vercel.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="차랑몰 — 자동차 용품 큐레이션">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="차랑몰 | 자동차 용품 큐레이션">
+  <meta name="twitter:description" content="차랑몰이 고른 자동차 용품 큐레이션. 세차·클리닝, 정비 소모품, 실내 편의, 전자·충전, 안전 용품을 한곳에서 비교하고 쿠팡에서 확인하세요.">
+  <meta name="twitter:image" content="https://car-parts-cpang.vercel.app/og.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "차랑몰",
+    "alternateName": "자동차 용품 큐레이션",
+    "url": "https://car-parts-cpang.vercel.app/",
+    "inLanguage": "ko",
+    "description": "차랑몰이 고른 자동차 용품 큐레이션. 세차·클리닝, 정비 소모품, 실내 편의, 전자·충전, 안전 용품을 한곳에서 비교하고 쿠팡에서 확인하세요.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "차랑몰",
+      "url": "https://car-parts-cpang.vercel.app/",
+      "inLanguage": "ko"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "차랑몰",
+      "url": "https://car-parts-cpang.vercel.app/"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: Inter, "Noto Sans KR", -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-black">
+  <header class="sticky top-0 z-20 border-b border-neutral-200 bg-white">
+    <div class="mx-auto max-w-5xl px-4 py-3">
+      <div class="flex items-center justify-between gap-3">
+        <a href="./" class="text-[22px] font-semibold tracking-[0.18em] text-black">차랑몰 <span class="hidden text-[11px] font-medium tracking-[0.28em] text-neutral-400 sm:inline">CAR GOODS</span></a>
+        <a id="headerLink" href="#" target="_blank" rel="noopener" class="shrink-0 bg-black px-3 py-2 text-[11px] font-medium tracking-wide text-white">오늘의 특가</a>
+      </div>
+      <nav class="mt-3 flex gap-5 text-[13px] font-medium tracking-wide">
+        <a href="./" class="border-b border-black pb-1 text-black">자동차용품</a>
+        <a href="./wiki/" class="pb-1 text-neutral-400 hover:text-black">용품가이드</a>
+        <span id="visitCount" hidden aria-hidden="true" class="ml-auto shrink-0 self-center text-[11px] font-medium tracking-wide text-neutral-400 tabular-nums"></span>
+      </nav>
+    </div>
+  </header>
+  <main class="mx-auto max-w-5xl px-4 pb-40">
+    <section class="pt-5 pb-4">
+      <p class="mb-1 hidden text-[11px] font-medium tracking-wide text-neutral-400 sm:block">차랑몰이 고른 오늘의 큐레이션</p>
+      <h1 id="heroTitle" class="text-xl font-semibold leading-snug sm:text-2xl">세차부터 실내·안전까지, 차에 필요한 것만</h1>
+      <p id="heroDescription" class="mt-1 line-clamp-2 text-[12px] leading-5 text-neutral-500 sm:mt-2 sm:text-[13px]">세차·클리닝, 정비 소모품, 실내 편의, 전자·충전, 안전 용품을 한곳에서 비교해 보세요.</p>
+      <p class="mt-1 overflow-hidden whitespace-nowrap text-[10px] leading-5 text-neutral-400">이 포스팅은 쿠팡 파트너스 활동으로 수수료를 제공받습니다.</p>
+    </section>
+    <section class="mb-2 flex items-center gap-4 overflow-x-auto border-b border-neutral-200 pb-3 text-[12px] font-medium tracking-wide">
+      <a href="./wiki/" class="shrink-0 text-black">용품가이드</a>
+      <a href="./wiki/01-wash.html" class="shrink-0 text-neutral-500 hover:text-black">셀프세차</a>
+      <a href="./wiki/02-maintain.html" class="shrink-0 text-neutral-500 hover:text-black">소모품</a>
+      <a href="./wiki/03-cabin.html" class="shrink-0 text-neutral-500 hover:text-black">실내</a>
+      <a href="./wiki/04-electro.html" class="shrink-0 text-neutral-500 hover:text-black">충전</a>
+      <a href="./wiki/05-safety.html" class="shrink-0 text-neutral-500 hover:text-black">안전</a>
+      <a href="./wiki/" class="shrink-0 text-neutral-400 hover:text-black">전체 →</a>
+    </section>
+    <nav class="sticky top-[5.4rem] z-10 -mx-4 mb-4 border-b border-neutral-200 bg-white px-4">
+      <div class="flex items-center gap-4 overflow-x-auto">
+        <button type="button" id="categoryAll" data-category="전체" class="shrink-0 px-1 py-2 text-[12px] font-medium">전체</button>
+        <div id="categoryScroll" class="flex min-w-0 flex-1 gap-4 overflow-x-auto"></div>
+      </div>
+    </nav>
+    <div id="status" class="py-16 text-center text-[12px] text-neutral-400">상품을 불러오는 중입니다.</div>
+    <section id="productGrid" class="hidden grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 lg:grid-cols-4"></section>
+    <nav id="pagination" class="mt-10 hidden" aria-label="상품 페이지"></nav>
+  </main>
+  <div id="modal" class="fixed inset-0 z-30 hidden items-end justify-center bg-black/50 p-0 sm:items-center sm:p-4">
+    <article class="max-h-[90vh] w-full max-w-lg overflow-y-auto bg-white p-5">
+      <div class="mb-4 flex justify-between"><span id="modalCategory" class="text-[11px] font-medium tracking-wide text-neutral-400"></span><button id="closeModal" class="text-2xl text-neutral-400" aria-label="닫기">&times;</button></div>
+      <img id="modalImage" class="mb-4 aspect-square w-full object-cover" alt="">
+      <h2 id="modalTitle" class="text-lg font-semibold"></h2>
+      <p id="modalPrice" class="mt-2 hidden text-[15px] font-semibold"></p>
+      <p id="modalDescription" class="mt-2 text-[13px] leading-6 text-neutral-500"></p>
+      <a id="modalLink" target="_blank" rel="noopener" class="mt-6 block bg-black py-3 text-center text-[13px] font-medium text-white">쿠팡에서 상품 확인하기</a>
+    </article>
+  </div>
+  <script>
+    const CATEGORIES = ['세차·클리닝', '정비·소모품', '실내·편의', '전자·충전', '안전', '기타'];
+    const PLACEHOLDER = './images/placeholder.svg';
+    const PAGE_SIZE = 40;
+    const ORDER_KEY = 'charangmall-product-order';
+    const state = { products: [], category: '전체', page: 1 };
+    const $ = id => document.getElementById(id);
+    function applySiteLinks(config) {
+      $('heroTitle').textContent = config.hero.title;
+      $('heroDescription').textContent = config.hero.description;
+      $('headerLink').href = config.featuredLink;
+      $('headerLink').textContent = config.featuredLabel;
+      if (config.rocketWowLink) $('footerWow').href = config.rocketWowLink;
+      if (config.carSearchLink) $('footerStay').href = config.carSearchLink;
+    }
+    fetch('./data/config.json').then(response => response.json()).then(applySiteLinks);
+    fetch('./data/products.json').then(response => {
+      if (!response.ok) throw new Error('상품 데이터 응답 오류');
+      return response.json();
+    }).then(products => {
+      state.products = applySessionOrder(uniqueProducts(products).filter(item =>
+        item.product?.imageUrl?.endsWith('.jpg') && !/^자동차 용품 추천 /.test(item.product.title || '')
+      ));
+      renderCategories();
+      renderProducts();
+    }).catch(error => {
+      $('status').textContent = '상품을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.';
+      console.error(error);
+    });
+    function uniqueProducts(list) {
+      const seen = new Set();
+      return list.filter(item => {
+        const title = item.product?.title || '';
+        const key = item.product?.productId
+          || (!/^자동차 용품 추천 /.test(title) && title)
+          || item.product?.coupangUrl;
+        if (!key || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+    function shuffleIds(ids) {
+      const items = ids.slice();
+      for (let i = items.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+      }
+      return items;
+    }
+    function readSavedOrder() {
+      try {
+        const saved = JSON.parse(sessionStorage.getItem(ORDER_KEY) || 'null');
+        return Array.isArray(saved) ? saved : [];
+      } catch {
+        return [];
+      }
+    }
+    function writeSavedOrder(ids) {
+      try { sessionStorage.setItem(ORDER_KEY, JSON.stringify(ids)); } catch {}
+    }
+    function sortByOrder(products, ids) {
+      const rank = new Map(ids.map((id, index) => [id, index]));
+      return products.slice().sort((a, b) => (rank.get(a.id) ?? 0) - (rank.get(b.id) ?? 0));
+    }
+    function applySessionOrder(products) {
+      const currentIds = products.map(item => item.id);
+      const known = new Set(currentIds);
+      const kept = readSavedOrder().filter(id => known.has(id));
+      const keptSet = new Set(kept);
+      const newcomers = shuffleIds(currentIds.filter(id => !keptSet.has(id)));
+      const order = kept.length ? kept.concat(newcomers) : shuffleIds(currentIds);
+      writeSavedOrder(order);
+      return sortByOrder(products, order);
+    }
+    function reshuffleSessionOrder() {
+      const order = shuffleIds(state.products.map(item => item.id));
+      writeSavedOrder(order);
+      state.products = sortByOrder(state.products, order);
+    }
+    function buttonClass(category) {
+      return `shrink-0 px-1 py-2 text-[12px] font-medium tracking-wide ${category === state.category ? 'border-b-2 border-black text-black' : 'text-neutral-400 hover:text-black'}`;
+    }
+    function renderCategories() {
+      $('categoryAll').className = buttonClass('전체');
+      const used = new Set(state.products.map(item => item.category));
+      const visible = CATEGORIES.filter(category => used.has(category));
+      $('categoryScroll').innerHTML = visible.map(category =>
+        `<button type="button" data-category="${escapeHtml(category)}" class="${buttonClass(category)}">${escapeHtml(category)}</button>`
+      ).join('');
+      $('categoryAll').onclick = () => selectCategory('전체');
+      $('categoryScroll').querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => selectCategory(button.dataset.category));
+      });
+    }
+    function selectCategory(category) {
+      const resettingFilters = category === '전체' && state.category !== '전체';
+      state.category = category;
+      state.page = 1;
+      if (resettingFilters) reshuffleSessionOrder();
+      renderCategories();
+      renderProducts();
+      $('productGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    function visibleProducts() {
+      return state.category === '전체'
+        ? state.products
+        : state.products.filter(item => item.category === state.category);
+    }
+    function pageButtonClass(active, disabled) {
+      const base = 'min-h-11 min-w-11 shrink-0 px-3 text-[12px] font-medium tracking-wide';
+      if (disabled) return `${base} text-neutral-300`;
+      if (active) return `${base} bg-black text-white`;
+      return `${base} text-neutral-500 hover:text-black`;
+    }
+    function goToPage(page, totalPages) {
+      const next = Math.min(totalPages, Math.max(1, page));
+      if (next === state.page) return;
+      state.page = next;
+      renderProducts();
+      $('productGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    function renderPagination(total) {
+      const nav = $('pagination');
+      const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+      if (state.page > totalPages) state.page = totalPages;
+      if (total === 0 || totalPages <= 1) {
+        nav.classList.add('hidden');
+        nav.innerHTML = '';
+        return;
+      }
+      const start = (state.page - 1) * PAGE_SIZE + 1;
+      const end = Math.min(state.page * PAGE_SIZE, total);
+      const prevDisabled = state.page === 1;
+      const nextDisabled = state.page === totalPages;
+      const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
+      nav.classList.remove('hidden');
+      nav.innerHTML = `
+        <p class="mb-3 text-center text-[11px] leading-5 text-neutral-400">${start}–${end} / ${total}개 · ${state.page} / ${totalPages}페이지</p>
+        <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
+          <button type="button" data-page="prev" ${prevDisabled ? 'disabled' : ''} aria-label="이전 페이지" class="${pageButtonClass(false, prevDisabled)}">이전</button>
+          ${pages.map(page => `<button type="button" data-page="${page}" aria-label="${page}페이지" ${page === state.page ? 'aria-current="page"' : ''} class="${pageButtonClass(page === state.page, false)}">${page}</button>`).join('')}
+          <button type="button" data-page="next" ${nextDisabled ? 'disabled' : ''} aria-label="다음 페이지" class="${pageButtonClass(false, nextDisabled)}">다음</button>
+        </div>
+      `;
+      nav.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => {
+          const target = button.dataset.page;
+          if (target === 'prev') goToPage(state.page - 1, totalPages);
+          else if (target === 'next') goToPage(state.page + 1, totalPages);
+          else goToPage(Number(target), totalPages);
+        });
+      });
+    }
+    function formatPrice(value) {
+      const n = Number(value);
+      return Number.isFinite(n) && n > 0 ? n.toLocaleString('ko-KR') + '원' : '';
+    }
+    function cardMeta(item) {
+      const price = formatPrice(item.product?.price);
+      const rocket = item.product?.rocket
+        ? '<span class="text-[10px] font-medium tracking-wide text-blue-600">로켓배송</span>'
+        : '';
+      if (!price && !rocket) return '';
+      return `<div class="mt-1 flex items-center gap-1.5">${rocket}${price ? `<span class="text-[12px] font-semibold leading-4">${price}</span>` : ''}</div>`;
+    }
+    function renderProducts() {
+      const products = visibleProducts();
+      const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
+      if (state.page > totalPages) state.page = totalPages;
+      if (state.page < 1) state.page = 1;
+      const start = (state.page - 1) * PAGE_SIZE;
+      const pageItems = products.slice(start, start + PAGE_SIZE);
+      $('status').classList.toggle('hidden', products.length > 0);
+      $('productGrid').classList.toggle('hidden', products.length === 0);
+      $('status').textContent = products.length
+        ? ''
+        : state.category === '전체'
+          ? '표시할 상품이 없습니다.'
+          : `${state.category} 상품이 없습니다.`;
+      $('productGrid').innerHTML = pageItems.map(item => `<a href="${escapeHtml(item.product.coupangUrl)}" target="_blank" rel="noopener sponsored" class="group text-left"><div class="overflow-hidden bg-neutral-50"><img src="${escapeHtml(item.product.imageUrl)}" alt="${escapeHtml(item.product.title)}" class="aspect-square w-full object-cover transition duration-200 group-hover:scale-[1.03]" loading="lazy" onerror="this.onerror=null;this.src='${PLACEHOLDER}'"></div><div class="pt-2"><span class="text-[10px] font-medium tracking-wide text-neutral-400">${escapeHtml(item.category || '추천')}</span><h2 class="mt-1 line-clamp-2 text-[12px] font-medium leading-5">${escapeHtml(item.product.title)}</h2>${cardMeta(item)}<p class="mt-1 line-clamp-2 text-[11px] leading-4 text-neutral-500">${escapeHtml(item.description || item.product.description || '자동차를 위한 추천 용품')}</p></div></a>`).join('');
+      renderPagination(products.length);
+    }
+    function openModal(item) {
+      $('modalCategory').textContent = item.category || '추천';
+      $('modalImage').onerror = function () { this.onerror = null; this.src = PLACEHOLDER; };
+      $('modalImage').src = item.product.imageUrl;
+      $('modalImage').alt = item.product.title;
+      $('modalTitle').textContent = item.product.title;
+      const price = formatPrice(item.product?.price);
+      $('modalPrice').textContent = price;
+      $('modalPrice').classList.toggle('hidden', !price);
+      $('modalDescription').textContent = item.description || item.product.description || '자동차를 위한 추천 용품입니다.';
+      $('modalLink').href = item.product.coupangUrl;
+      $('modal').classList.replace('hidden', 'flex');
+    }
+    function closeModal() { $('modal').classList.replace('flex', 'hidden'); }
+    $('closeModal').addEventListener('click', closeModal);
+    $('modal').addEventListener('click', event => { if (event.target === $('modal')) closeModal(); });
+    function escapeHtml(value) { return String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char])); }
+  </script>
+  <script src="./visits.js"></script>
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white">
+    <div class="flex">
+      <a id="footerWow" href="https://www.coupang.com/np/campaigns/82" target="_blank" rel="noopener sponsored" class="flex-1 py-2 text-center text-[11px] font-medium tracking-wide text-black">로켓와우</a>
+      <a id="footerStay" href="https://www.coupang.com/np/search?q=%EC%84%B8%EC%B0%A8%20%EC%9A%A9%ED%92%88" target="_blank" rel="noopener sponsored" class="flex-1 border-l border-neutral-200 py-2 text-center text-[11px] font-medium tracking-wide text-black">세차용품</a>
+    </div>
+    <a href="./wiki/" class="block bg-black py-3 text-center text-[13px] font-medium tracking-wide text-white" style="padding-bottom: max(0.75rem, env(safe-area-inset-bottom))">용품가이드 보기</a>
+  </div>
+</body>
+</html>
