@@ -54,6 +54,8 @@
 https://docs.google.com/spreadsheets/d/1wU99mTHsdFaLqBalR8-pFQA9OvG2BbcDa69muJXNf4w/gviz/tq?tqx=out:csv&sheet=%EA%B4%91%EA%B3%A0%EC%9A%A9
 ```
 
+시트가 웹에 게시되지 않으면 이 URL은 401 HTML을 돌려준다. `npm run sync`는 `광고용` → `Sheet1` → `Untitled` 탭을 시도한 뒤, 실패하면 `data/sheet-source.csv`를 읽는다. Drive에서 CSV를 내려받아 그 파일로 두면 비공개 시트에서도 동기화된다.
+
 ---
 
 ## 4. 수집

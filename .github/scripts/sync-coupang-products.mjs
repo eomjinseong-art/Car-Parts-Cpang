@@ -2,7 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const repo = process.cwd();
-const sheetUrl = 'https://docs.google.com/spreadsheets/d/1wU99mTHsdFaLqBalR8-pFQA9OvG2BbcDa69muJXNf4w/gviz/tq?tqx=out:csv&sheet=%EA%B4%91%EA%B3%A0%EC%9A%A9';
+const sheetId = '1wU99mTHsdFaLqBalR8-pFQA9OvG2BbcDa69muJXNf4w';
+const sheetTabs = ['광고용', 'Sheet1', 'Untitled', '시트1'];
 const imageDir = path.join(repo, 'images', 'products');
 const productsPath = path.join(repo, 'data', 'products.json');
 const sheetExportPath = path.join(repo, 'data', 'sheet-update.csv');
@@ -11,7 +12,7 @@ const delayMs = Number(process.env.DELAY_MS || 1200);
 
 await fs.mkdir(imageDir, { recursive: true });
 
-const csv = await (await fetch(sheetUrl)).text();
+const csv = await loadSheetCsv();
 const rows = parseCsv(csv);
 const headers = rows[0].map(value => value.trim().toLowerCase());
 const index = name => headers.indexOf(name);
@@ -52,7 +53,11 @@ for (const row of rows.slice(1)) {
   const sheetCategory = (row[categoryIndex] || '').replace(/^#/, '').trim();
   const sheetDescription = (row[descriptionIndex] || '').trim();
   const jpgPath = path.join(imageDir, `product-${String(id).padStart(3, '0')}.jpg`);
-  const hasJpg = await fileExists(jpgPath);
+  let hasJpg = await fileExists(jpgPath);
+  if (linkChanged && hasJpg) {
+    await fs.unlink(jpgPath);
+    hasJpg = false;
+  }
   const needsTitle = linkChanged || !title || isFallbackTitle(title, id) || isWeakTitle(title);
   const needsImage = !hasJpg;
 
@@ -389,6 +394,49 @@ async function saveOutputs(list) {
     ].map(csvCell).join(','))
   ];
   await fs.writeFile(sheetExportPath, `\ufeff${csvLines.join('\n')}\n`);
+}
+
+async function loadSheetCsv() {
+  const localPath = process.env.SHEET_CSV_PATH || path.join(repo, 'data', 'sheet-source.csv');
+  for (const tab of sheetTabs) {
+    const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}`;
+    try {
+      const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20000) });
+      const text = await response.text();
+      if (looksLikeCsv(text)) {
+        console.log(`공개 CSV: 탭 '${tab}'`);
+        return text;
+      }
+      console.warn(`탭 '${tab}' CSV 실패 (HTTP ${response.status})`);
+    } catch (error) {
+      console.warn(`탭 '${tab}' 요청 실패: ${error.message}`);
+    }
+  }
+
+  try {
+    const url = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=0`;
+    const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20000) });
+    const text = await response.text();
+    if (looksLikeCsv(text)) {
+      console.log('공개 CSV: gid=0 export');
+      return text;
+    }
+  } catch (error) {
+    console.warn(`gid=0 export 실패: ${error.message}`);
+  }
+
+  if (await fileExists(localPath)) {
+    console.log(`공개 시트가 잠겨 있어 로컬 CSV를 사용합니다: ${path.relative(repo, localPath)}`);
+    return await fs.readFile(localPath, 'utf8');
+  }
+
+  throw new Error('시트 CSV를 가져오지 못했습니다. 시트를 웹에 게시하거나 data/sheet-source.csv를 두세요.');
+}
+
+function looksLikeCsv(text) {
+  if (!text || /^\s*</.test(text) || /accounts\.google|Sign in|Access Denied/i.test(text)) return false;
+  const first = text.split(/\r?\n/).find(line => line.trim()) || '';
+  return /쿠팡|상품|링크|no/i.test(first);
 }
 
 async function loadExistingProducts() {

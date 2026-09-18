@@ -1,7 +1,9 @@
-import { appendFile } from 'node:fs/promises';
+import { appendFile, readFile, access } from 'node:fs/promises';
+import path from 'node:path';
 
-const sheetUrl = 'https://docs.google.com/spreadsheets/d/1wU99mTHsdFaLqBalR8-pFQA9OvG2BbcDa69muJXNf4w/gviz/tq?tqx=out:csv&sheet=%EA%B4%91%EA%B3%A0%EC%9A%A9';
-const csv = await (await fetch(sheetUrl)).text();
+const sheetId = '1wU99mTHsdFaLqBalR8-pFQA9OvG2BbcDa69muJXNf4w';
+const sheetTabs = ['광고용', 'Sheet1', 'Untitled', '시트1'];
+const csv = await loadSheetCsv();
 const rows = parseCsv(csv);
 const headers = rows[0].map(header => header.trim().toLowerCase());
 const linkIndex = headers.indexOf('쿠팡 파트너스 링크');
@@ -45,6 +47,30 @@ async function writeOutput(name, value) {
   if (process.env.GITHUB_OUTPUT) {
     await appendFile(process.env.GITHUB_OUTPUT, `${name}<<EOF\n${value}\nEOF\n`);
   }
+}
+
+async function loadSheetCsv() {
+  const localPath = process.env.SHEET_CSV_PATH || path.join(process.cwd(), 'data', 'sheet-source.csv');
+  for (const tab of sheetTabs) {
+    const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}`;
+    try {
+      const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20000) });
+      const text = await response.text();
+      if (looksLikeCsv(text)) return text;
+    } catch {}
+  }
+  try {
+    await access(localPath);
+    return await readFile(localPath, 'utf8');
+  } catch {
+    throw new Error('시트 CSV를 가져오지 못했습니다. data/sheet-source.csv를 두세요.');
+  }
+}
+
+function looksLikeCsv(text) {
+  if (!text || /^\s*</.test(text) || /accounts\.google|Sign in|Access Denied/i.test(text)) return false;
+  const first = text.split(/\r?\n/).find(line => line.trim()) || '';
+  return /쿠팡|상품|링크|no/i.test(first);
 }
 
 function parseCsv(input) {
