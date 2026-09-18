@@ -57,6 +57,7 @@
     $('headerLink').textContent = config.featuredLabel;
     if (config.rocketWowLink && $('footerWow')) $('footerWow').href = config.rocketWowLink;
     if (config.carSearchLink && $('footerStay')) $('footerStay').href = config.carSearchLink;
+    if (config.archiveLink && $('footerArchive')) $('footerArchive').href = config.archiveLink;
   }).catch(() => {});
   Promise.all([
     fetch('./guides.json').then(r => r.json()),

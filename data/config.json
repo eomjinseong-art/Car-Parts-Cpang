@@ -1,9 +1,10 @@
 {
-  "siteTitle": "차랑몰 | 자동차 용품 큐레이션",
+  "siteTitle": "오토픽스 | 자동차 용품 큐레이션",
   "featuredLabel": "오늘의 특가",
   "featuredLink": "https://www.coupang.com/np/search?q=%EC%9E%90%EB%8F%99%EC%B0%A8%20%EC%9A%A9%ED%92%88",
   "rocketWowLink": "https://www.coupang.com/np/campaigns/82",
   "carSearchLink": "https://www.coupang.com/np/search?q=%EC%84%B8%EC%B0%A8%20%EC%9A%A9%ED%92%88",
+  "archiveLink": "https://british-motors.vercel.app/",
   "hero": {
     "title": "세차부터 실내·안전까지, 차에 필요한 것만",
     "description": "세차·클리닝, 정비 소모품, 실내 편의, 전자·충전, 안전 용품을 한곳에서 비교해 보세요."

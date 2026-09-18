@@ -1,4 +1,4 @@
-# 차랑몰
+# 오토픽스 (Autopicks)
 
 자동차 용품 쿠팡 파트너스 큐레이션 샵.
 
@@ -8,5 +8,6 @@
 - 배포: GitHub `main` → Vercel
 - 상품 원장: 구글 시트 `광고용` 탭
 - 운영: [PLAYBOOK.md](./PLAYBOOK.md)
+- 영국차 아카이브: [영국차아카이브](https://british-motors.vercel.app/)
 
 파트너스 단축링크(`https://link.coupang.com/a/...`)를 시트에 붙여 넣은 뒤 로컬에서 `npm run sync` 하면 상품명·사진이 갱신됩니다. 지금은 검색 URL과 JPG 플레이스홀더로 홈이 먼저 보이게 되어 있습니다.
