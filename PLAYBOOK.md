@@ -26,9 +26,10 @@
 - 레포: `eomjinseong-art/Car-Parts-Cpang`
 - 사이트 타이틀: 오토픽스 | 자동차 용품 큐레이션
 - 영국차 아카이브: https://british-motors.vercel.app/
+- 체스카 블로그: https://chesscarworld.blogspot.com/
 
-헤더: 오토픽스 | 자동차용품 | 용품가이드 | 오늘의 특가  
-하단: 로켓와우 | 세차용품, 그 아래 영국차아카이브
+헤더: 오토픽스 | 자동차용품 | 용품가이드 | 체스카 블로그 | 오늘의 특가  
+하단: 로켓와우 | 세차용품, 그 아래 영국차아카이브 | 체스카 블로그
 
 시드 상품의 `coupangUrl`은 쿠팡 **검색 URL**이다. 파트너스 단축링크는 시트에 붙여 넣은 뒤 `npm run sync`로 교체한다.
 
