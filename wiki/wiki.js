@@ -58,6 +58,10 @@
     if (config.rocketWowLink && $('footerWow')) $('footerWow').href = config.rocketWowLink;
     if (config.carSearchLink && $('footerStay')) $('footerStay').href = config.carSearchLink;
     if (config.archiveLink && $('footerArchive')) $('footerArchive').href = config.archiveLink;
+    if (config.blogLink && $('headerBlog')) $('headerBlog').href = config.blogLink;
+    if (config.blogLink && $('footerBlog')) $('footerBlog').href = config.blogLink;
+    if (config.blogLabel && $('headerBlog')) $('headerBlog').textContent = config.blogLabel;
+    if (config.blogLabel && $('footerBlog')) $('footerBlog').textContent = config.blogLabel;
   }).catch(() => {});
   Promise.all([
     fetch('./guides.json').then(r => r.json()),
