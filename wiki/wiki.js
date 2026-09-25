@@ -58,6 +58,11 @@
     if (config.rocketWowLink && $('footerWow')) $('footerWow').href = config.rocketWowLink;
     if (config.carSearchLink && $('footerStay')) $('footerStay').href = config.carSearchLink;
     if (config.archiveLink && $('footerArchive')) $('footerArchive').href = config.archiveLink;
+    const filmLinks = { ff: config.ffArchiveLink, mi: config.miArchiveLink, bond: config.bondArchiveLink };
+    document.querySelectorAll('[data-archive]').forEach(el => {
+      const href = filmLinks[el.dataset.archive];
+      if (href) el.href = href;
+    });
     if (config.blogLink && $('headerBlog')) $('headerBlog').href = config.blogLink;
     if (config.blogLink && $('footerBlog')) $('footerBlog').href = config.blogLink;
     if (config.blogLabel && $('headerBlog')) $('headerBlog').textContent = config.blogLabel;
