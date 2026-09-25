@@ -9,6 +9,9 @@
 - 상품 원장: 구글 시트 `광고용` 탭
 - 운영: [PLAYBOOK.md](./PLAYBOOK.md)
 - 영국차 아카이브: [영국차아카이브](https://british-motors.vercel.app/)
+- 분노의 질주 아카이브: [분노의 질주 아카이브](https://ff-archive.vercel.app)
+- 미션 임파서블 아카이브: [미션 임파서블 아카이브](https://mi-archive.vercel.app)
+- 007 본드 아카이브: [007 본드 아카이브](https://bond-archive-two.vercel.app)
 - 체스카 블로그: [체스카 블로그](https://chesscarworld.blogspot.com/)
 
 파트너스 단축링크(`https://link.coupang.com/a/...`)를 시트에 붙여 넣은 뒤 로컬에서 `npm run sync` 하면 상품명·사진이 갱신됩니다. 시트가 비공개인 경우 `data/sheet-source.csv`를 사용합니다.
