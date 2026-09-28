@@ -58,7 +58,7 @@ for (const row of rows.slice(1)) {
     await fs.unlink(jpgPath);
     hasJpg = false;
   }
-  const needsTitle = linkChanged || !title || isFallbackTitle(title, id) || isWeakTitle(title);
+  const needsTitle = linkChanged || !title || isFallbackTitle(title, id) || isWeakTitle(title) || isPlaceholderTitle(title, id);
   const needsImage = !hasJpg;
 
   let didScrape = false;
@@ -137,14 +137,19 @@ async function finalizeCatalog(list) {
       }
     };
   });
+  const omitted = classified.filter(omitFromCatalog);
+  const publishable = classified.filter(item => !omitFromCatalog(item));
+  if (omitted.length) {
+    console.log(`자리표시·비자동차 ${omitted.length}개 제외: ${omitted.map(item => item.id).join(', ')}`);
+  }
 
-  for (const item of classified) {
+  for (const item of publishable) {
     if (item.product.productId) continue;
     item.product.productId = await resolveProductId(item.product.coupangUrl);
     await sleep(120);
   }
 
-  const { kept, duplicates } = dedupeProducts(classified);
+  const { kept, duplicates } = dedupeProducts(publishable);
   const missing = kept
     .filter(item => !item.product.imageUrl.endsWith('.jpg'))
     .map(item => item.id);
@@ -463,6 +468,31 @@ function isBlockedTitle(value) {
 
 function isFallbackTitle(value, id) {
   return value === `자동차 용품 추천 ${id}`;
+}
+
+function isPlaceholderTitle(value, id) {
+  const title = String(value || '').trim();
+  if (!title) return true;
+  if (id != null && isFallbackTitle(title, id)) return true;
+  if (/^자동차 용품 추천(?:\s*\d+)?$/.test(title)) return true;
+  if (/^(?:세차·클리닝|정비·소모품|실내·편의|전자·충전|안전|기타) 추천$/.test(title)) return true;
+  if (/^추천\s*\d+$/.test(title)) return true;
+  if (title === '바닥매트/트렁크매트') return true;
+  return false;
+}
+
+function isClearlyNotCar(title) {
+  const text = String(title || '');
+  const vehicle = /차량|자동차|송풍구|대시보드|시거/;
+  if (/우레탄\s*폼|우레탄폼/.test(text) && !/세차|차량|자동차/.test(text)) return true;
+  if (/오토바이|자전거/.test(text) && !/차량용|자동차/.test(text)) return true;
+  if (/무선\s*충전|무선\s*고속\s*충전|충전\s*스탠드|맥세이프|보조배터리|에어팟|애플워치|Z폴드|갤럭시\s*워치/.test(text) && !vehicle.test(text)) return true;
+  return false;
+}
+
+function omitFromCatalog(item) {
+  const title = item?.product?.title || '';
+  return isPlaceholderTitle(title, item?.id) || isClearlyNotCar(title);
 }
 
 function isWeakTitle(value) {
