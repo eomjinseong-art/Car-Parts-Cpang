@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "category": "전자·충전",
-    "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
-    "product": {
-      "title": "초텍 2in1 맥세이프 아이폰 에어팟 갤럭시 고속 무선충전기, 화이트, 1개",
-      "coupangUrl": "https://link.coupang.com/a/g9VxZ61iiy",
-      "imageUrl": "./images/products/product-001.jpg",
-      "productId": "9457012267"
-    }
-  },
-  {
     "id": 2,
     "category": "기타",
     "description": "차에 유용한 추천 용품입니다.",
@@ -19,39 +8,6 @@
       "coupangUrl": "https://link.coupang.com/a/g9VyDN9QPc",
       "imageUrl": "./images/products/product-002.svg",
       "productId": "9243964191"
-    }
-  },
-  {
-    "id": 3,
-    "category": "전자·충전",
-    "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
-    "product": {
-      "title": "맥세이프 보조배터리 10000mAh 무선 보조배터리 고속충전 PD22.5W QC3.0 C타입 핸드폰거치대, 블랙, W15",
-      "coupangUrl": "https://link.coupang.com/a/g9VzfItS4y",
-      "imageUrl": "./images/products/product-003.jpg",
-      "productId": "7762543485"
-    }
-  },
-  {
-    "id": 5,
-    "category": "전자·충전",
-    "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
-    "product": {
-      "title": "유알아이 SMNU N2 진동방지 오토바이 핸드폰 거치대 자전거 휴대폰거치대 자전거핸드폰거치대, 블랙+미러볼, 블랙+미러볼형쿠폰",
-      "coupangUrl": "https://link.coupang.com/a/g9VBsWwxY4",
-      "imageUrl": "./images/products/product-005.jpg",
-      "productId": "8297704486"
-    }
-  },
-  {
-    "id": 6,
-    "category": "전자·충전",
-    "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
-    "product": {
-      "title": "코드웨이 23w 3in1 고속 무선충전기 거치대 애플워치 갤럭시 워치 호환 초고속 충전기 포함 - 스마트....",
-      "coupangUrl": "https://link.coupang.com/a/g9VB2kZEqG",
-      "imageUrl": "./images/products/product-006.jpg",
-      "productId": "8291730267"
     }
   },
   {
@@ -88,28 +44,6 @@
     }
   },
   {
-    "id": 10,
-    "category": "기타",
-    "description": "차에 유용한 추천 용품입니다.",
-    "product": {
-      "title": "벨킨 3in1 Qi2 15W 컨버터블 마그네틱 무선 고속 충전 스탠드 초소형 각도 조절 지원 WIZ034kr, 블랙(WIZ034krBK), 1개",
-      "coupangUrl": "https://link.coupang.com/a/g9VEld2r0e",
-      "imageUrl": "./images/products/product-010.jpg",
-      "productId": "8380043003"
-    }
-  },
-  {
-    "id": 11,
-    "category": "전자·충전",
-    "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
-    "product": {
-      "title": "SwanScout 705S 갤럭시 Z폴드 전용 3in1 무선충전기 워치 이어폰 동시충전 Z플립 시리즈 호환, 1개, 블랙",
-      "coupangUrl": "https://link.coupang.com/a/g9VEUc68VE",
-      "imageUrl": "./images/products/product-011.jpg",
-      "productId": "8721970304"
-    }
-  },
-  {
     "id": 12,
     "category": "전자·충전",
     "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
@@ -121,17 +55,6 @@
     }
   },
   {
-    "id": 13,
-    "category": "전자·충전",
-    "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
-    "product": {
-      "title": "르메이어 20W 스탠드 고속 무선충전기, 블랙, 1개",
-      "coupangUrl": "https://link.coupang.com/a/g9VGkf0IA8",
-      "imageUrl": "./images/products/product-013.jpg",
-      "productId": "6271884466"
-    }
-  },
-  {
     "id": 14,
     "category": "전자·충전",
     "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
@@ -140,17 +63,6 @@
       "coupangUrl": "https://link.coupang.com/a/g9VGXNEoTc",
       "imageUrl": "./images/products/product-014.jpg",
       "productId": "6957550114"
-    }
-  },
-  {
-    "id": 15,
-    "category": "전자·충전",
-    "description": "거치·충전·하이패스처럼 전자 장비를 쓰는 칸입니다.",
-    "product": {
-      "title": "감성공장 맥세이프 호환 고속 무선충전기, 실버 + 화이트, 1개 - 맥세이프 고속 무선충전의 편리함",
-      "coupangUrl": "https://link.coupang.com/a/g9VHNdJFw4",
-      "imageUrl": "./images/products/product-015.jpg",
-      "productId": "5876138217"
     }
   },
   {
@@ -418,17 +330,6 @@
     }
   },
   {
-    "id": 41,
-    "category": "기타",
-    "description": "차에 유용한 추천 용품입니다.",
-    "product": {
-      "title": "수달 폴리 우레탄폼 폼건 폼 단열 스프레이 크리너 세정제 세척제 개별상품, 우레탄 폼건 1개, 1개",
-      "coupangUrl": "https://link.coupang.com/a/g9VZjUbaeq",
-      "imageUrl": "./images/products/product-041.jpg",
-      "productId": "8507722964"
-    }
-  },
-  {
     "id": 43,
     "category": "정비·소모품",
     "description": "와이퍼·워셔액·필터처럼 주기적으로 갈아 주는 소모품입니다.",
@@ -540,10 +441,10 @@
   },
   {
     "id": 53,
-    "category": "기타",
-    "description": "차에 유용한 추천 용품입니다.",
+    "category": "실내·편의",
+    "description": "향, 햇빛, 수납처럼 타고 내릴 때 편한 실내용품입니다.",
     "product": {
-      "title": "실내·편의 추천",
+      "title": "불스원 그라스 디퓨저 95ml",
       "coupangUrl": "https://link.coupang.com/a/g9V7rnKJtk",
       "imageUrl": "./images/products/product-053.svg",
       "productId": "8990223981"
@@ -558,17 +459,6 @@
       "coupangUrl": "https://link.coupang.com/a/g9V8ahmjrU",
       "imageUrl": "./images/products/product-054.jpg",
       "productId": "6060483541"
-    }
-  },
-  {
-    "id": 55,
-    "category": "기타",
-    "description": "차에 유용한 추천 용품입니다.",
-    "product": {
-      "title": "자동차 용품 추천 55",
-      "coupangUrl": "https://link.coupang.com/a/g9V8KJgRQO",
-      "imageUrl": "./images/products/product-055.svg",
-      "productId": "9604472156"
     }
   },
   {
@@ -595,10 +485,10 @@
   },
   {
     "id": 58,
-    "category": "기타",
-    "description": "차에 유용한 추천 용품입니다.",
+    "category": "정비·소모품",
+    "description": "와이퍼·워셔액·필터처럼 주기적으로 갈아 주는 소모품입니다.",
     "product": {
-      "title": "자동차 용품 추천 58",
+      "title": "불스원 70000 연료첨가제 휘발유",
       "coupangUrl": "https://link.coupang.com/a/g9WaszMRe8",
       "imageUrl": "./images/products/product-058.jpg",
       "productId": "8123004945"
@@ -653,7 +543,7 @@
     "category": "정비·소모품",
     "description": "와이퍼·워셔액·필터처럼 주기적으로 갈아 주는 소모품입니다.",
     "product": {
-      "title": "정비·소모품 추천",
+      "title": "불스원 Rain OK 에탄올 3in1 발수코팅 워셔액",
       "coupangUrl": "https://link.coupang.com/a/g9WdV4azvM",
       "imageUrl": "./images/products/product-063.jpg",
       "productId": "5749856293"
@@ -946,17 +836,6 @@
     }
   },
   {
-    "id": 91,
-    "category": "실내·편의",
-    "description": "향, 햇빛, 수납처럼 타고 내릴 때 편한 실내용품입니다.",
-    "product": {
-      "title": "바닥매트/트렁크매트",
-      "coupangUrl": "https://link.coupang.com/a/g9Ww92EVCS",
-      "imageUrl": "./images/products/product-091.jpg",
-      "productId": "6598166979"
-    }
-  },
-  {
     "id": 93,
     "category": "기타",
     "description": "차에 유용한 추천 용품입니다.",
@@ -1005,7 +884,7 @@
     "category": "기타",
     "description": "차에 유용한 추천 용품입니다.",
     "product": {
-      "title": "자동차 용품 추천 101",
+      "title": "메이튼 가죽 타공 핸들커버",
       "coupangUrl": "https://link.coupang.com/a/g9WDYlWEr6",
       "imageUrl": "./images/products/product-101.jpg",
       "productId": "6304317121"
@@ -1185,17 +1064,6 @@
       "coupangUrl": "https://link.coupang.com/a/g9WSM0HWlE",
       "imageUrl": "./images/products/product-121.jpg",
       "productId": "7121820611"
-    }
-  },
-  {
-    "id": 122,
-    "category": "기타",
-    "description": "차에 유용한 추천 용품입니다.",
-    "product": {
-      "title": "자동차 용품 추천",
-      "coupangUrl": "https://link.coupang.com/a/g9WUmCKRSm",
-      "imageUrl": "./images/products/product-122.svg",
-      "productId": "6350778362"
     }
   },
   {

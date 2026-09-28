@@ -17,15 +17,22 @@
     return list.filter(item => {
       const title = item.product?.title || '';
       const key = item.product?.productId
-        || (!/^자동차 용품 추천 /.test(title) && title)
+        || (!placeholderTitle(title) && title)
         || item.product?.coupangUrl;
       if (!key || seen.has(key)) return false;
       seen.add(key);
       return true;
     });
   }
+  function placeholderTitle(title) {
+    const value = title || '';
+    return /^자동차 용품 추천/.test(value)
+      || /^(?:세차·클리닝|정비·소모품|실내·편의|전자·충전|안전|기타) 추천$/.test(value)
+      || /^추천\s*\d+$/.test(value)
+      || value === '바닥매트/트렁크매트';
+  }
   function catalogReady(item) {
-    return item.product?.imageUrl?.endsWith('.jpg') && !/^자동차 용품 추천 /.test(item.product.title || '');
+    return item.product?.imageUrl?.endsWith('.jpg') && !placeholderTitle(item.product.title || '');
   }
   function imageSrc(item) {
     const url = item.product.imageUrl || '';
